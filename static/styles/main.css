@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Roboto:wght@300&display=swap");
+
+body {
+  overflow: hidden;
+}
+#footToogle {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: #005074;
+}
+
+#footToogle div {
+  position: relative;
+  height: 4px;
+  width: 70%;
+  left: 15%;
+  top: calc(50% - 2px);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#footer {
+  position: absolute;
+  z-index: 666;
+  left: 0;
+  width: 100%;
+  transition: 1.4s;
+}
+
+.timeline {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95%;
+  background-image: url(/static/images/bgLightMob.jpg);
+  background-position: right;
+  background-size: cover;
+}
+
+.segment {
+  position: absolute;
+  width: 10%;
+  height: 1%;
+  left: 2%;
+  background-color: black;
+  transition: 2s;
+  border-radius: 30px;
+}
+.timestamp {
+  position: absolute;
+  top: 46%;
+  left: 0;
+  width: 12.5%;
+  height: 8%;
+  background-color: black;
+  border-radius: 30px;
+}
+.timestamp h2 {
+  position: absolute;
+  left: 105%;
+  top: -7px;
+  width: 200px;
+  text-align: left;
+  letter-spacing: -1px;
+  font-size: 20px;
+}
+
+.screen {
+  position: absolute;
+  width: 90%;
+  height: 25%;
+  left: 2%;
+  transition: 2s;
+  transform-origin: left;
+}
+
+.tmlcard {
+  position: relative;
+  overflow: hidden;
+  top: calc(50% - 25vw);
+  left: 33%;
+  width: 50vw;
+  height: 50vw;
+  border-radius: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgb(33, 37, 41);
+}
+
+.tmlcard:hover .overlay {
+  opacity: 1;
+}
+
+.centeredText {
+  margin: 8% auto;
+  text-align: center;
+  font-size: 2vw;
+  padding: 10px;
+}
+.centeredText p {
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
+nav a {
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  .segment {
+    width: 1%;
+    height: 10%;
+    bottom: 8%;
+    left: none;
+  }
+  .timestamp {
+    position: absolute;
+    top: unset;
+    left: 47.5%;
+    bottom: 2%;
+    width: 3%;
+    height: 20%;
+    border-radius: 30px;
+  }
+  .timestamp h2 {
+    top: -50px;
+    left: -600%;
+    width: 1300%;
+    font-size: 30px;
+    text-align: center;
+  }
+  .screen {
+    width: 40%;
+    height: 90%;
+    bottom: 2%;
+    left: unset;
+    transform-origin: bottom;
+  }
+  .tmlcard {
+    position: absolute;
+    top: 20%;
+    left: calc(50% - 17.5vh);
+    width: 35vh;
+    height: 35vh;
+  }
+  .timeline {
+    background-image: url(/static/images/bgLightDesk.jpg);
+  }
+  .centeredText {
+    font-size: 3vh;
+  }
+  .timeline a {
+    font-size: 1.4rem;
+  }
+}
